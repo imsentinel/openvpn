@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# vim: tabstop=4 softtabstop=4 noexpandtab fileencoding=utf-8
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+DEB_DIR=$(CURDIR)/debian/openvpn
+
+%:
+	dh $@
+override_dh_auto_configure:
+	./configure --prefix=/opt/openvpn
+override_dh_builddeb:
+	dh_builddeb --destdir=./deb-pkg/

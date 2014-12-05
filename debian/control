@@ -1,0 +1,12 @@
+Source: openvpn
+Section: admin
+Priority: optional
+Maintainer: Deepak Mohandas <deepakmdass88@gmail.com>
+Homepage: https://github.com/deepakmdass88/openvpn
+Standards-Version: 2.3.6
+Build-Depends: debhelper (>= 5.0), libapt-pkg-dev (>= 0.7.23), libcurl4-openssl-dev, gcc, libpam0g-dev, make, liblzo2-dev, libssl-dev, net-tools
+
+Package: openvpn
+Architecture: any
+Depends: ${shlibs:Depends}, openssl, liblzo2-2, libpam0g, net-tools
+Description: openvpn-server
