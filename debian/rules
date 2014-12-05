@@ -9,6 +9,7 @@ DEB_DIR=$(CURDIR)/debian/openvpn
 %:
 	dh $@
 override_dh_auto_configure:
+	autoreconf -i -v -f
 	./configure --prefix=/opt/openvpn
 override_dh_builddeb:
 	dh_builddeb --destdir=./deb-pkg/
